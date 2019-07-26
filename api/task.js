@@ -2,8 +2,8 @@ const moment = require("moment");
 
 module.exports = app => {
   const index = (req, res) => {
-    const date = req.body.date
-      ? req.body.date
+    const date = req.query.date
+      ? req.query.date
       : moment()
           .endOf("day")
           .toDate();
